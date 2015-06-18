@@ -1,0 +1,199 @@
+.project_builder_title_container{
+    @include outer-container;
+    margin-bottom: 50px;
+    
+    
+    h1{
+        @include span-columns(12);
+        font-family: $font-two;
+    }
+}
+
+.project_builder_container{
+    @include outer-container;
+    margin-top: 15px;
+    overflow: hidden;
+    
+    .service_type_selection{
+        @include span-columns(3);
+        @include omega(4n);
+        height: 251px;
+        position: relative;
+        transition: all .5s ease;
+        
+        &:hover{
+            cursor: pointer;
+        }
+        
+    }
+
+    .service_type_overlay{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background-color: rgba(0,0,0,.5);
+        
+        h3{
+            color: $white;
+            text-align: center;
+            position: relative;
+            top: 80px;
+            font-size: 1.6em;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.selected_service{
+    background-color: rgba(green, .6) !important;
+}
+
+.project_cart_title{
+    color: green;
+    text-transform: uppercase;
+    position: absolute;
+    top: 100px;
+    left: 55px;
+    opacity: 0;
+    @include outer-container;
+    @include shift(1);
+}
+
+.project_builder_second_container{
+    @include outer-container;
+    overflow-x: hidden;
+    
+    .service_secondary_selection{
+        @include span-columns(1);
+        background-color: $accent;
+        text-align: center;
+        //border: 1px solid $accent;
+        transition: all .5s ease;
+        color: $white;
+        
+        img{
+            width: 67px;
+            transition: all .5s ease;
+        }
+        
+        &:hover{
+            background-color: green;
+            //border: 1px solid green;
+            cursor: pointer;
+        }
+        
+    }
+    .first-second-selection{
+        @include shift(3);
+    }
+    .add_components_title{
+        @include shift(3);
+        color: green;
+        text-transform: uppercase;
+    }
+}
+
+.active_secondary_selection{
+    background-color: green !important;
+    
+    img{
+        opacity: .5;
+    }
+}
+
+.second_container{
+    position: relative;
+    top: -275px;
+    opacity: 0;
+    z-index: -1;
+}
+
+.secondary_item_title{
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: .6em;
+}
+
+.second_container_row{
+    margin-top: 20px;
+}
+
+#project-cart-container{
+    @include outer-container;
+    
+    #project-cart{
+        @include span-columns(3);
+        position: relative;
+        top: -331px;
+    }
+}
+
+#next-button-project-builder{
+    margin-left: 53%;
+    margin-top: 20px;
+    transition: all .5 ease;
+    position: relative;
+    
+}
+
+.added-to-cart-text{
+    font-size: 1.2em;
+    background-color: green;
+    color: $white;
+    padding: 10px;
+    opacity: 0;
+    
+}
+
+.project_comments_container{
+    @include outer-container;
+    position: relative;
+    top: 0px; //-550px
+    opacity: 0;
+    display: none;
+    
+    .project_comments{
+        @include span-columns(9);
+        @include shift(3);
+        height: 350px;
+        //border: 2px solid $accent;
+        
+        h4{
+            color: green;
+            text-transform: uppercase;
+        }
+
+        textarea{
+            width: 100%;
+            height: 100%;
+            border: 2px solid $accent;
+            outline: 0;
+            padding: 10px;
+            font-family: $font-two;
+            font-size: 1.2em;
+            background-color: transparent;
+        }
+    }
+}
+
+.successful_project_sent_container{
+    @include outer-container;
+    position: absolute;
+    top: 245px; //45px
+    //left: -5px;
+    z-index: -100;
+    opacity: 0;
+    @include shift(2);
+    
+    p{
+        @include span-columns(7);
+        @include shift(2);
+        font-size: 1.3em;
+        font-family: $font-two;
+        line-height: 1.5em;
+        letter-spacing: .025em;
+        text-align: center;
+    }
+}

@@ -1,0 +1,47 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+// @import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,700|Lora);
+
+@import "bourbon";
+
+@import "neat";
+
+@import "_variables.scss";
+
+@import "_animate.css";
+
+@import "_parallax.scss";
+
+@import "_project_builder.scss";
+
+body{
+    font-family: $font;
+    background-color: $gray;
+}
+
+.primary_button{
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid $accent;
+    color: $accent;
+    font-weight: 300;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    transition: all .5s ease;
+    
+    &:hover{
+        color: $white;
+        background-color: $accent;
+        cursor: pointer;
+    }
+}
+
+.home_container{
+    @include outer-container;
+    opacity: 0;
+}

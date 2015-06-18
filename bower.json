@@ -1,0 +1,10 @@
+{
+  "name": "gulp-bootstrap",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.1"
+  },
+  "devDependencies": {
+    "compass": "~0.5.4"
+  }
+}
