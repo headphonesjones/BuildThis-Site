@@ -33,6 +33,7 @@ body{
     font-size: 1.2em;
     letter-spacing: 1px;
     transition: all .5s ease;
+    outline: none;
     
     &:hover{
         color: $white;

@@ -26,7 +26,7 @@ $('.service_type_selection').on({
         tl3.to($('#app-selection'), 0.5, {delay:-.6, left: -distance, ease: Power1.easeOut}, "slide-sync");
         tl3.to($('#software-selection'), 0.5, {delay:-.6, left: -distance2, ease: Power1.easeOut}, "slide-sync");
         tl3.to($('#other-selection'), 0.5, {delay:-.6, left: -distance3, ease: Power1.easeOut}, "slide-sync");
-        tl3.to($('.project_cart_title'), 0.5, {opacity: 1, top: '85px', delay: 0.5});
+        tl3.to($('.project_cart_title'), 0.5, {opacity: 1, top: '65px', delay: 0.5});
         tl3.to($('.second_container'), .5, {opacity: 1, zIndex: 1, top: "-295px", ease: Back.easeOut});
 
         $('.service_type_overlay', this).addClass("selected_service");
@@ -46,7 +46,9 @@ $( ".service_secondary_selection" ).click(function() {
         tl6.to($('.added-to-cart-text'), .5, {opacity: 1});
     }
     else{
-        $(this).data('selectedOption').remove();
+        var tl7= new TimelineLite();
+        tl7.to($(this).data('selectedOption'), .5, {opacity: 0, display: 'none'});
+        //$(this).data('selectedOption').remove();
     }
 
     $("#project-cart-container").css("opacity", "1");
@@ -65,7 +67,7 @@ $('#next-button-project-builder').click(function() {
         var tl4 = new TimelineLite();
         tl4.to($('.button-text'), .5, {opacity: 0});
         tl4.to($(".project_builder_second_container"), .5, {opacity: 0, zIndex: -2});
-        tl4.to($(this), .5, {top: '150px'});
+        tl4.to($(this), .5, {top: '265px'});
         tl4.to($('.project_comments_container'), .5, {opacity: 1, zIndex: 1, top: distance4 -30, ease: Back.easeOut});
         tl4.to($('.button-text'), .5, {opacity: 1});
         function changeText(){
@@ -77,7 +79,7 @@ $('#next-button-project-builder').click(function() {
     } else {
         var tl5 = new TimelineLite();
         tl5.to($('.project_comments_container'), 1, {delay: .5, opacity: 0, zIndex: -1, top: '-600px', ease: Back.easeOut}, "sync-fade");
-        tl5.to($('#next-button-project-builder'), 1, {opacity: 0, zIndex: -1, top: '250px', ease: Back.easeOut}, "sync-fade");
+        tl5.to($('#next-button-project-builder'), 1, {opacity: 0, zIndex: -1, top: '350px', ease: Back.easeOut}, "sync-fade");
         tl5.to($('.project_builder_container'), 1, {opacity: 0}, "sync-fade");
         tl5.to($('.project_cart_title'), 1, {opacity: 0}, "sync-fade");
         tl5.to($('#project-cart-container'), 1, {opacity: 0}, "sync-fade");

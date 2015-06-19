@@ -6,6 +6,7 @@ var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var neat = require('node-neat').includePaths;
+var uncss = require('gulp-uncss');
 
 var paths = {
     scss: 'app/styles/*.scss'
@@ -24,6 +25,9 @@ gulp.task('styles', function () {
     .pipe($.postcss([
       require('autoprefixer-core')({browsers: ['last 1 version']})
     ]))
+    .pipe(uncss({
+       html: ['app/*.html']
+     }))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
